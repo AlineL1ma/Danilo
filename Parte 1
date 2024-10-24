@@ -1,3 +1,17 @@
+create database alineEmpregado;
+use aline;
+
+create table if not exists alineEmpregado (
+`cpf` VARCHAR(14) NOT NULL,
+  `nome` VARCHAR(25) NOT NULL,
+  `departamento` VARCHAR(25) NOT NULL,
+  `numeroTel` DECIMAL(12) UNSIGNED ZEROFILL NOT NULL,
+  `salario` DECIMAL(7,2) UNSIGNED ZEROFILL NOT NULL,
+  `dataAdm` DATETIME NOT NULL,
+  PRIMARY KEY (`cpf`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
 SELECT 
     e.nome AS Nome_Empregado,
     e.cpf AS CPF_Empregado,
